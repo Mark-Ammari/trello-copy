@@ -1,0 +1,30 @@
+.CardModal {
+    background: #F4F5F7;
+}
+
+.DialogContent {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 1em;
+}
+
+.MultilineContent {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 1em;
+}
+
+.Margin {
+    padding: 1em;
+}
+
+.Input {
+    height: 30px;
+    font-size: 16px;
+    padding: 0.5em;
+    width: 100%;
+    border: none;
+    border-radius: 2px;
+}

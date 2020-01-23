@@ -1,0 +1,19 @@
+.AddCardBtn {
+    background: #EBECF0;
+    width: 295px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: black;
+    height: 40px;
+    border-radius: 3px;
+    padding-left: 5px;
+    font-size: 14px;
+    position: absolute;
+    bottom: 0
+}
+
+.AddCardBtn:hover {
+    background: #D9DCE2;
+    cursor: pointer;
+}

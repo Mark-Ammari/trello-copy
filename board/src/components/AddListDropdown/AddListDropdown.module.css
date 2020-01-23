@@ -1,0 +1,19 @@
+.AddListDropdownContainer {
+    width: 260px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.AddListDropdownContainer input {
+    width: 238px;
+    height: 30px;
+    margin: 0.2em auto;
+    padding-left: 1em;
+    border: 1px solid #4d90fe;
+    border-radius: 2px;
+}
+
+.AddListDropdown {
+    margin: 0em 0.2em 0.2em 0.2em 
+}

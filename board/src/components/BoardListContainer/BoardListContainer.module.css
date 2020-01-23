@@ -1,0 +1,14 @@
+.BoardListContainer {
+    padding-top: 60px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    flex-direction: row;
+}
+
+.Border {
+    min-width: 2em;
+    height: 300px;
+
+}
