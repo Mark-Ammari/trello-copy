@@ -14,8 +14,7 @@
   "dependencies": {
     "axios": "^0.19.1",
     "concurrently": "^5.0.2",
-    "express": "^4.17.1",
-    "react-textarea-autosize": "^7.1.2"
+    "express": "^4.17.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.2"

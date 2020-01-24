@@ -116,5 +116,14 @@ server.put('/v1/api/changecard/:index/:indextwo/', (req, res) => {
         .catch(error => res.send(error))
 })
 
+// change color
+server.put('/v1/api/changecolor/', (req, res) => {
+    axios.put("https://board-app-aa484.firebaseio.com/color.json", {
+        color: req.query.color
+    })
+    .then(response => res.send(response.data))
+    .catch(err => res.send(err))
+})
+
 server.listen(port, () => console.log(`Server started, listening on port: ${port}`));
 

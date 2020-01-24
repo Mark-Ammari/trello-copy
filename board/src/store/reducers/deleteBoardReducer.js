@@ -6,14 +6,14 @@ const initialState = {
 
 const deleteBoardReducer = (state = initialState, action) => {
     switch (action.type) {
-        // case actionType.DELETE_BOARD_START:
-        //     return {
-        //         ...state
-        //     };
-        // case actionType.DELETE_BOARD_FAIL:
-        //     return {
-        //         ...state
-        //     };
+        case actionType.DELETE_BOARD_START:
+            return {
+                ...state
+            };
+        case actionType.DELETE_BOARD_FAIL:
+            return {
+                ...state
+            };
         case actionType.DELETE_BOARD_SUCCESS:
             return {
                 ...state,

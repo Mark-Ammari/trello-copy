@@ -1,26 +1,26 @@
 import * as actionType from '../actions/actionTypes';
 
 const initialState = {
-    changeCardMsg: {}
+    changeColor: ""
 }
 
-const putCardReducer = (state = initialState, action) => {
+const putColorReducer = (state = initialState, action) => {
     switch (action.type) {
-        case actionType.PUT_CARD_START:
+        case actionType.PUT_COLOR_START:
             return {
                 ...state
             };
-        case actionType.PUT_CARD_FAIL:
+        case actionType.PUT_COLOR_FAIL:
             return {
                 ...state
             };
-        case actionType.PUT_CARD_SUCCESS:
+        case actionType.PUT_COLOR_SUCCESS:
             return {
                 ...state,
-                changeCardMsg: action.res
+                changeColor: action.res
             };
         default: return state;
     };
 };
 
-export default putCardReducer;
+export default putColorReducer;

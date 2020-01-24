@@ -6,14 +6,14 @@ const initialState = {
 
 const postNewCardReducer = (state = initialState, action) => {
     switch (action.type) {
-        // case actionType.POST_NEWCARD_START:
-        //     return {
-        //         ...state
-        //     };
-        // case actionType.POST_NEWCARD_FAIL:
-        //     return {
-        //         ...state
-        //     };
+        case actionType.POST_NEWCARD_START:
+            return {
+                ...state
+            };
+        case actionType.POST_NEWCARD_FAIL:
+            return {
+                ...state
+            };
         case actionType.POST_NEWCARD_SUCCESS:
             return {
                 ...state,

@@ -1,15 +1,16 @@
 .Header {
     background-color: #026aa6;
     width: 100%;
-    height: 40px;
+    height: 60px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     position: fixed;
     z-index: 1;
 }
 
 .Header img {
-    width: 80px;
+    margin-left: 1em;
+    width: 90px;
     height: auto;
 }

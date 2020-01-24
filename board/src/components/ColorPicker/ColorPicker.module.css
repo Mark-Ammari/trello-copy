@@ -1,0 +1,36 @@
+.Red {
+    background-color: red;
+}
+.Blue {
+    background-color: blue;
+}
+.Green {    
+    background-color: green;
+}
+.Orange {    
+    background-color: orange;
+}
+.Purple {
+    background-color: darkviolet;
+}
+.Gray {
+    background-color: gray;
+}
+.ColorPicker {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ColorPicker div {
+    width: 20px;
+    border-radius: 2px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.ColorPicker div:hover {
+    opacity: 0.75;
+    cursor: pointer;
+}

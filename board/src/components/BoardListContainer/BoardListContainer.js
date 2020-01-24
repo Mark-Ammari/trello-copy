@@ -12,6 +12,7 @@ import CardModal from '../CardModal/CardModal';
 import Dropdown from '../Dropdown/Dropdown';
 import Card from '../Card/Card';
 import { Button } from '@material-ui/core';
+import colorContext from '../Context/Context';
 
 class BoardListContainer extends Component {
     state = {
@@ -43,7 +44,6 @@ class BoardListContainer extends Component {
         const board = Object.keys(this.props.boardList["boardListContainer"])[index]
         const card = Object.keys(this.props.boardList["boardListContainer"][board]).filter(card => card !== "title")[indexTwo]
         const cardObj = this.props.boardList["boardListContainer"][board][card]
-        console.log(cardObj.issueType)
         this.setState({
             summary: cardObj.summary,
             description: cardObj.description,
@@ -62,7 +62,6 @@ class BoardListContainer extends Component {
     }
     render() {
         let boards = null;
-        console.log(this.state.summary, this.state.description, this.state.issue)
         if (Object.keys(this.props.boardList).length > 0) {
             boards = (Object.values(this.props.boardList["boardListContainer"]).map((title, key) => {
                 return <BoardList addCard={() => this.addNewCardHandler(key)} onClick={() => this.deleteBoardHandler(key)} key={key} title={title.title} cards={
