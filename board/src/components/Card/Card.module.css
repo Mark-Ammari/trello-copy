@@ -24,3 +24,9 @@
     right: 0;
     padding: 5px 10px;
 }
+
+.Typography {
+    overflow-wrap: break-word;
+    max-height: 100px;
+    max-width: 265px;
+}

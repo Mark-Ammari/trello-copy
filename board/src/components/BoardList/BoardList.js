@@ -16,9 +16,7 @@ class BoardList extends Component {
             <div className={classes.BoardList}>
                 <div className={classes.BoardListContent}>
                     <Typography component="h6" variant="h6">{this.props.title}</Typography>
-                    <Fab style={{margin: "0.5em 0em"}} color="secondary" onClick={this.props.onClick} size="small">
-                        <DeleteRounded />
-                    </Fab>
+                       <span className={classes.Icon} onClick={this.props.onClick}><DeleteRounded color="secondary"/></span>
                 </div>
                 {this.props.cards}
                 <div className={classes.Margin}></div>

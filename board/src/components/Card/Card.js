@@ -19,11 +19,12 @@ const card = props => {
     }
     return (
         <div onClick={props.click} className={classes.Card}>
-            <Typography>{props.summary}</Typography>
-            <div className={classes.Icons}>
-                {issueType}
-                <span onClick={props.deleteCard}><DeleteRounded color="secondary" /></span>
-                <EditOutlined style={{ color: "#c3c3c3" }} className={classes.Edit} />
+            <Typography component="h6" className={classes.Typography}>{props.summary}</Typography>
+            <div className={classes.IconsContainer}>
+                <div className={classes.Icons}>
+                    {issueType}
+                    <EditOutlined style={{ color: "#c3c3c3" }} className={classes.Edit} />
+                </div>
             </div>
         </div>
     );

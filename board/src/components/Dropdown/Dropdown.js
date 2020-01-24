@@ -6,7 +6,6 @@ import Select from '@material-ui/core/Select';
 
 const useStyles = makeStyles(theme => ({
     margin: {
-        margin: theme.spacing(1),
     },
     formControl: {
         margin: theme.spacing(1),
@@ -14,36 +13,25 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-const CustomizedSelects = props => {
+const Dropdown = props => {
     const classes = useStyles();
-    const [issue, setIssue] = React.useState('');
-    const handleChange = event => {
-        setIssue(event.target.value);
-    };
 
     return (
         <div>
-            <FormControl className={classes.formControl}>
-                <Select
-                    labelId="demo-simple-select-placeholder-label-label"
-                    id="demo-simple-select-placeholder-label"
-                    value={props.cardissue}
-                    variant="outlined"
-                    margin="dense"
-                    onChange={props.changeissue}
-                    displayEmpty
-                    className={classes.selectEmpty}
-                >
-                    <MenuItem value="">
-                        <em>Issue</em>
-                    </MenuItem>
-                    <MenuItem value="story">Story</MenuItem>
-                    <MenuItem value="task">Task</MenuItem>
-                    <MenuItem value="bug">Bug</MenuItem>
-                </Select>
-            </FormControl>
+            <Select
+                value={props.value}
+                variant="outlined"
+                margin="dense"
+                onChange={props.onChange}
+                className={classes.selectEmpty}
+            >
+                <MenuItem value="issue"><em>issue</em></MenuItem>
+                <MenuItem value="story">story</MenuItem>
+                <MenuItem value="task">task</MenuItem>
+                <MenuItem value="bug">bug</MenuItem>
+            </Select>
         </div>
     );
 };
 
-export default CustomizedSelects;
+export default Dropdown;
