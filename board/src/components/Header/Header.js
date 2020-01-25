@@ -4,12 +4,15 @@ import trello from '../../assets/trellologo.png';
 import ChangeColor from '../ChangeColor/ChangeColor';
 import ColorContext from '../Context/Context';
 import { COLOR_PICKER } from '../Hooks/useColor';
+import colorContext from '../Context/Context';
 
 const Header = () => {
     const context = useContext(ColorContext)
+    console.log(context.color)
     return (
-        <header className={classes.Header}>
-             {/* style={{ background: COLOR_PICKER[context.color][0] }} */}
+        <header             
+        style={{ background: COLOR_PICKER[context.color][0] }}
+        className={classes.Header}>
             <img src={trello} alt="trello"/>
             <ChangeColor />
         </header>
