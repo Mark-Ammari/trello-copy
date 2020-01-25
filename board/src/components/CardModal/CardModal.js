@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { makeStyles, Dialog, Button, DialogActions, DialogContent, Typography, DialogContentText, DialogTitle, TextField, IconButton, } from '@material-ui/core/';
+import { makeStyles, Dialog, DialogActions, DialogContent, IconButton, } from '@material-ui/core/';
 import classes from './CardModal.module.css';
 import { ReportProblemRounded, FormatAlignLeftRounded, SubtitlesRounded, CloseRounded } from '@material-ui/icons'
 import TextAreaAutosize from 'react-textarea-autosize'

@@ -1,16 +1,12 @@
 import React, { Component } from 'react';
 import classes from './BoardList.module.css';
-import { Typography, Fab } from '@material-ui/core'
+import { Typography } from '@material-ui/core'
 import { DeleteRounded } from '@material-ui/icons'
-import CardModal from '../CardModal/CardModal';
 import AddCardBtn from '../AddCardBtn/AddCardBtn';
 import { fetchBoards }  from '../../store/actions/fetchAction';
 import { connect } from 'react-redux'
 
 class BoardList extends Component {
-    componentDidMount() {
-
-    }
     render() {
         return (
             <div className={classes.BoardList}>

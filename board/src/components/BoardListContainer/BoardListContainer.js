@@ -12,7 +12,6 @@ import CardModal from '../CardModal/CardModal';
 import Dropdown from '../Dropdown/Dropdown';
 import Card from '../Card/Card';
 import { Button } from '@material-ui/core';
-import colorContext from '../Context/Context';
 
 class BoardListContainer extends Component {
     state = {

@@ -5,7 +5,8 @@ import Header from './components/Header/Header';
 import BoardListContainer from './components/BoardListContainer/BoardListContainer';
 import { connect } from 'react-redux';
 import Footer from './components/Footer/Footer';
-import { COLOR_PICKER } from './components/Hooks/useColor'
+import { COLOR_PICKER } from './components/GlobalColors/globalColors';
+
 class App extends Component {
   render() {
     document.body.style.backgroundColor = COLOR_PICKER[this.props.color][1]

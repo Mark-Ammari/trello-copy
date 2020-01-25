@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './Card.module.css';
-import { DeleteRounded, EditOutlined, BookRounded, BugReportRounded, CheckRounded } from '@material-ui/icons'
-import { Typography, Fab } from '@material-ui/core';
+import { EditOutlined, BookRounded, BugReportRounded, CheckRounded } from '@material-ui/icons'
+import { Typography } from '@material-ui/core';
 
 const card = props => {
 
