@@ -8,7 +8,7 @@ import Footer from './components/Footer/Footer';
 import { COLOR_PICKER } from './components/Hooks/useColor'
 class App extends Component {
   render() {
-    document.body.style.backgroundColor = COLOR_PICKER[this.props.color][1]
+    // document.body.style.backgroundColor = COLOR_PICKER[this.props.color][1]
     return (
       <ColorContext.Provider value={{
         color: this.props.color

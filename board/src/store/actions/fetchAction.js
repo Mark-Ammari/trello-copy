@@ -13,11 +13,11 @@ export const getBoardsFail = () => {
     };
 };
    
-export const getBoardsSuccess = (res, color) => {
+export const getBoardsSuccess = (res) => {
     return {
         type: actionType.FETCH_BOARDLIST_SUCCESS,
         res: res,
-        color: color
+        // color: color
     };
 };
 
@@ -27,7 +27,7 @@ export const fetchBoards = () => {
         instance.get("/v1/api")
         .then(res => {
             // console.log(res.data);
-            dispatch(getBoardsSuccess(res.data, res.data.color.color));
+            dispatch(getBoardsSuccess(res.data));
         })
         .catch(error => {
             console.log(error);

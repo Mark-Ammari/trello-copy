@@ -26,6 +26,7 @@ export const deleteBoard = (index) => {
         dispatch(deleteBoardStart())
         instance.delete(`/v1/api/deleteboard/${index}`)
         .then(res => {
+            console.log(res)
             dispatch(deleteBoardSuccess(res));
             dispatch(fetchBoards())
         })

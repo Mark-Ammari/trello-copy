@@ -3,7 +3,7 @@
     "-LzFCIeOJDrHmZRKzbVG" : {
       "-LzIh0XcEIk01_QGx5sR" : {
         "description" : "User has wrong locals",
-        "issueType" : "story",
+        "issueType" : "task",
         "summary" : "[TRIAGE] :: Geolocation Correction -  Wrong Locals. Also testing the character limit of this by  using a substring and seeing the max amount of characters this can hold."
       },
       "-LzJookGzE_M0t3gB-6F" : {
@@ -13,14 +13,21 @@
       },
       "-LzKhpVD8TCF7JBIqoJO" : {
         "description" : "Enter a description...",
-        "issueType" : "task",
-        "summary" : "Enter a title..."
+        "issueType" : "bug",
+        "summary" : "hahahahah"
       },
       "title" : "triage"
     },
-    "-LzKXKHIxzcowprsOM9t" : {
-      "title" : "Test"
+    "-LzObVTxuwMPiDWRriPW" : {
+      "-LzOfhnwUKfOU1IYeHKJ" : {
+        "description" : "Enter a description...",
+        "issueType" : "issue",
+        "summary" : "Enter a title..."
+      },
+      "title" : "ewfewf"
+    },
+    "color" : {
+      "color" : "green"
     }
-  },
-  "color" : "color"
+  }
 }

@@ -62,8 +62,7 @@ class BoardListContainer extends Component {
     }
     render() {
         let boards = null;
-        if (Object.keys(this.props.boardList).length > 0) {
-            boards = (Object.values(this.props.boardList["boardListContainer"]).map((title, key) => {
+            boards = (Object.values(this.props.boardList["boardListContainer"]).filter(card => !("color" in card)).map((title, key) => {
                 return <BoardList addCard={() => this.addNewCardHandler(key)} onClick={() => this.deleteBoardHandler(key)} key={key} title={title.title} cards={
                     Object.keys(title).filter(card => card !== "title").map((card, index) => {
                         return <CardModal
@@ -90,9 +89,6 @@ class BoardListContainer extends Component {
                     })
                 } />
             }))
-        } else {
-            boards = null
-        }
         return (
             <div className={classes.BoardListContainer}>
                 {boards}

@@ -8,7 +8,8 @@ import contextColor from '../Context/Context';
 const Footer = () => {
     const context = useContext(contextColor)
     return (
-        <footer style={{ backgroundColor: COLOR_PICKER[context.color][0] }} className={classes.Footer}>
+        <footer  className={classes.Footer}>
+            {/* style={{ backgroundColor: COLOR_PICKER[context.color][0] }} */}
             <p>Created by Mark Ammari</p>
             <div>
                 <a re="noopener noreferrer" target="_blank" href="https://github.com/Mark-Ammari"><img src={github} alt="github" /></a>

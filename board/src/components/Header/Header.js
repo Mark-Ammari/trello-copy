@@ -8,7 +8,8 @@ import { COLOR_PICKER } from '../Hooks/useColor';
 const Header = () => {
     const context = useContext(ColorContext)
     return (
-        <header style={{ background: COLOR_PICKER[context.color][0] }} className={classes.Header}>
+        <header className={classes.Header}>
+             {/* style={{ background: COLOR_PICKER[context.color][0] }} */}
             <img src={trello} alt="trello"/>
             <ChangeColor />
         </header>

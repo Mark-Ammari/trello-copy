@@ -118,7 +118,7 @@ server.put('/v1/api/changecard/:index/:indextwo/', (req, res) => {
 
 // change color
 server.put('/v1/api/changecolor/', (req, res) => {
-    axios.put("https://board-app-aa484.firebaseio.com/color.json", {
+    axios.put("https://board-app-aa484.firebaseio.com/boardListContainer/color.json", {
         color: req.query.color
     })
     .then(response => res.send(response.data))
