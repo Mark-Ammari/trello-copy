@@ -1,7 +1,7 @@
 const express = require('express');
 const server = express();
 const axios = require('axios');
-const port = process.env.port || 8080;
+const port = process.env.PORT || 8080;
 const path = require('path');
 
 server.use((req, res, next) => {
