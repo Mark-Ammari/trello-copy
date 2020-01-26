@@ -6,8 +6,13 @@ import BoardListContainer from './components/BoardListContainer/BoardListContain
 import { connect } from 'react-redux';
 import Footer from './components/Footer/Footer';
 import { COLOR_PICKER } from './components/GlobalColors/globalColors';
+import { fetchBoards } from './store/actions/fetchAction';
 
 class App extends Component {
+  componentDidMount() {
+    this.props.onFetchBoardListData()
+  }
+
   render() {
     document.body.style.backgroundColor = COLOR_PICKER[this.props.color][1]
     return (
@@ -31,4 +36,10 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps)(App);
+const mapDispatchToProps = dispatch => {
+  return {
+      onFetchBoardListData: () => dispatch(fetchBoards()),
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

@@ -20,7 +20,7 @@ class BoardListContainer extends Component {
         issue: "",
     }
     componentDidMount() {
-        this.props.onFetchBoardListData()
+        // this.props.onFetchBoardListData()
     }
 
     deleteBoardHandler = index => {
@@ -106,7 +106,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        onFetchBoardListData: () => dispatch(fetchBoards()),
+        // onFetchBoardListData: () => dispatch(fetchBoards()),
         onDeleteBoardListData: (index) => dispatch(deleteBoard(index)),
         onChangeCardData: (index, indexTwo, summary, description, issue) => dispatch(putCard(index, indexTwo, summary, description, issue)),
         onAddCard: (index) => dispatch(postCard(index)),
