@@ -14,20 +14,24 @@ class App extends Component {
   }
 
   render() {
-    document.body.style.backgroundColor = COLOR_PICKER[this.props.color][1]
-    return (
-      <ColorContext.Provider value={{
-        color: this.props.color
-      }}>
-        <div className="App">
-          <Header />
-          <BoardListContainer />
-          <div className="Border"></div>
-          <Footer />
-        </div>
-      </ColorContext.Provider>
-    );
-  }
+    if (this.props.color === "") {
+      return null
+    } else {
+      document.body.style.backgroundColor = COLOR_PICKER[this.props.color][1]
+      return (
+        <ColorContext.Provider value={{
+          color: this.props.color
+        }}>
+          <div className="App">
+            <Header />
+            <BoardListContainer />
+            <div className="Border"></div>
+            <Footer />
+          </div>
+        </ColorContext.Provider>
+      );
+    };
+  };
 };
 
 const mapStateToProps = state => {
@@ -38,7 +42,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-      onFetchBoardListData: () => dispatch(fetchBoards()),
+    onFetchBoardListData: () => dispatch(fetchBoards()),
   };
 };
 

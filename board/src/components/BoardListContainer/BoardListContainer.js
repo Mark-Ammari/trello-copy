@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import classes from './BoardListContainer.module.css';
 import AddListBtn from '../AddListBtn/AddListBtn';
 import BoardList from '../BoardList/BoardList';
-import { fetchBoards } from '../../store/actions/fetchAction';
 import { deleteBoard } from '../../store/actions/deleteAction';
 import { putCard } from '../../store/actions/putAction';
 import { postCard } from '../../store/actions/postAction';
@@ -19,10 +18,6 @@ class BoardListContainer extends Component {
         description: "",
         issue: "",
     }
-    componentDidMount() {
-        // this.props.onFetchBoardListData()
-    }
-
     deleteBoardHandler = index => {
         this.props.onDeleteBoardListData(index)
     }
@@ -106,7 +101,6 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        // onFetchBoardListData: () => dispatch(fetchBoards()),
         onDeleteBoardListData: (index) => dispatch(deleteBoard(index)),
         onChangeCardData: (index, indexTwo, summary, description, issue) => dispatch(putCard(index, indexTwo, summary, description, issue)),
         onAddCard: (index) => dispatch(postCard(index)),
