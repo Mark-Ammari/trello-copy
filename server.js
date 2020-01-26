@@ -1,7 +1,8 @@
 const express = require('express');
 const server = express();
 const axios = require('axios');
-const port = 8080;
+const port = process.env.port || 8080;
+const path = require('path');
 
 server.use((req, res, next) => {
     res.header("Access-Control-Allow-Origin", "*");
@@ -124,6 +125,13 @@ server.put('/v1/api/changecolor/', (req, res) => {
     .then(response => res.send(response.data))
     .catch(err => res.send(err))
 })
+
+if (process.env.NODE_ENV === 'production') {
+    server.use(express.static('board/build'));
+    server.get('*', (res, req) => {
+        res.sendFile(path.join(__dirname, 'board', 'build', 'index.html'));
+    });
+}
 
 server.listen(port, () => console.log(`Server started, listening on port: ${port}`));
 
