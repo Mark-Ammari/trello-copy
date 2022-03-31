@@ -1,5 +1,5 @@
+import Axios from 'axios';
 import * as actionType from './actionTypes';
-import instance from '../../baseURL';
 
 export const getBoardsStart = () => {
     return {
@@ -24,7 +24,7 @@ export const getBoardsSuccess = (res, color) => {
 export const fetchBoards = () => {
     return dispatch => {
         dispatch(getBoardsStart())
-        instance.get("/v1/api")
+        Axios.get("/v1/api")
         .then(res => {
             // console.log(res.data);
             dispatch(getBoardsSuccess(res.data, res.data["boardListContainer"].color.color));

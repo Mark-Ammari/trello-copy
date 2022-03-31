@@ -1,5 +1,5 @@
+import Axios from 'axios';
 import * as actionType from './actionTypes';
-import instance from '../../baseURL';
 import { fetchBoards } from './fetchAction';
 
 export const createNewBoardStart = () => {
@@ -24,7 +24,7 @@ export const createNewBoardSuccess = (res) => {
 export const postNewBoard = (title) => {
     return dispatch => {
         dispatch(createNewBoardStart())
-        instance.post(`/v1/api/newBoard/${title}`)
+        Axios.post(`/v1/api/newBoard/${title}`)
         .then(res => {
             console.log(res);
             dispatch(createNewBoardSuccess(res));
@@ -59,7 +59,7 @@ export const createCardSuccess = (res) => {
 export const postCard = (index) => {
     return dispatch => {
         dispatch(createCardStart())
-        instance.post(`/v1/api/newboard/${index}/newcard`)
+        Axios.post(`/v1/api/newboard/${index}/newcard`)
         .then(res => {
             dispatch(createCardSuccess(res));
             dispatch(fetchBoards())

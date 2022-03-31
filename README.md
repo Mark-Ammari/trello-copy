@@ -1,4 +1,4 @@
-# Webimizr
+# Trello Copycat
 [![Generic badge](https://img.shields.io/badge/Version-1.0.0-<COLOR>.svg)](https://shields.io/) [![Generic badge](https://img.shields.io/badge/Website-Active-<COLOR>.svg)](https://shields.io/)
 
 > Developed a Kanban-like application that will track your progress by utilizing the principles of CRUD.

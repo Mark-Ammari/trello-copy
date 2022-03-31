@@ -1,6 +1,6 @@
 import * as actionType from './actionTypes';
-import instance from '../../baseURL';
 import { fetchBoards } from './fetchAction'
+import Axios from 'axios';
 
 export const changeCardStart = () => {
     return {
@@ -24,7 +24,7 @@ export const changeCardSuccess = (res) => {
 export const putCard = (index, indexTwo, summary, description, issue) => {
     return dispatch => {
         dispatch(changeCardStart())
-        instance.put(`/v1/api/changecard/${index}/${indexTwo}/`, null, {params: {
+        Axios.put(`/v1/api/changecard/${index}/${indexTwo}/`, null, {params: {
             summary: summary,
             description: description,
             issue: issue,
@@ -63,7 +63,7 @@ export const changeColorSuccess = (res) => {
 export const putColor = (color) => {
     return dispatch => {
         dispatch(changeColorStart())
-        instance.put(`/v1/api/changecolor/`, null, {params: {
+        Axios.put(`/v1/api/changecolor/`, null, {params: {
             color: color
         }})
         .then(res => {

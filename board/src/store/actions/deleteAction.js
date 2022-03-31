@@ -1,5 +1,5 @@
+import Axios from 'axios';
 import * as actionType from './actionTypes';
-import instance from '../../baseURL';
 import { fetchBoards } from './fetchAction';
 
 export const deleteBoardStart = () => {
@@ -24,7 +24,7 @@ export const deleteBoardSuccess = (res) => {
 export const deleteBoard = (index) => {
     return dispatch => {
         dispatch(deleteBoardStart())
-        instance.delete(`/v1/api/deleteboard/${index}`)
+        Axios.delete(`/v1/api/deleteboard/${index}`)
         .then(res => {
             dispatch(deleteBoardSuccess(res));
             dispatch(fetchBoards())
@@ -58,7 +58,7 @@ export const deleteCardSuccess = (res) => {
 export const deleteCard = (index, indexTwo) => {
     return dispatch => {
         dispatch(deleteCardStart())
-        instance.delete(`/v1/api/deleteboard/${index}/deletecard/${indexTwo}`)
+        Axios.delete(`/v1/api/deleteboard/${index}/deletecard/${indexTwo}`)
         .then(res => {
             console.log(res);
             dispatch(deleteCardSuccess(res));
