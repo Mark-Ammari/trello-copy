@@ -1,7 +1,7 @@
 {
   "name": "board-app",
   "version": "1.0.0",
-  "description": "",
+  "homepage": ".",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

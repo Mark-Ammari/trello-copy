@@ -5,8 +5,10 @@ const port = process.env.PORT || 8080;
 const path = require('path');
 
 server.use((req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Credentials", "true");
+    res.setHeader("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
+    res.setHeader("Access-Control-Allow-Headers", "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers")
     next();
 });
 
@@ -122,8 +124,8 @@ server.put('/v1/api/changecolor/', (req, res) => {
     axios.put("https://board-app-aa484.firebaseio.com/boardListContainer/color.json", {
         color: req.query.color
     })
-    .then(response => res.send(response.data))
-    .catch(err => res.send(err))
+        .then(response => res.send(response.data))
+        .catch(err => res.send(err))
 })
 
 if (process.env.NODE_ENV === 'production') {
